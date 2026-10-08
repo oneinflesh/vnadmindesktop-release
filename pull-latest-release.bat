@@ -5,7 +5,7 @@ cd /d "%~dp0"
 title Vethagama Nanban Office
 
 echo Checking for Vethagama Nanban Office updates...
-git pull --ff-only origin master
+git -c credential.helper= -c credential.helper=wincred pull --ff-only origin master
 if errorlevel 1 (
     echo.
     echo Update failed. Close the desktop application, check your internet connection, and try again.
